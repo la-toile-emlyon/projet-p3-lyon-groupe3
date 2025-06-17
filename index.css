@@ -1,4 +1,5 @@
 /* Le code CSS spécifique à la page d'accueil */
+/* Variables */
 :root {
     --vert: #00B0AE;
     --vertClair: #DDF6F8;
@@ -6,6 +7,7 @@
     --roseClair: #FFEAFC;
     --jaune: #FFB636;
     --jauneClair: #FFEBC7;
+
     --text-color: black;
 
     --titre-font-family: "Baloo Chettan 2", sans-serif;
@@ -23,12 +25,30 @@
     --radius: 20px;
 }
 
+/* Formatation des éléments */
 * {
     padding: 0%;
     margin: 0%;
     list-style: none;
     text-decoration: none;
     color: inherit;
+}
+
+h3 {
+    font-family: var(--titre-font-family);
+    font-weight: var(--titre-font-weight);
+    font-style: var(--titre-font-style);
+    color: var(--vert);
+    text-align: center;
+    font-size: xxx-large;
+    height: 60px;
+}
+
+.lineTitle {
+    width: 100px;
+    max-width: 800px;
+    height: auto;
+    margin-left: 155px;
 }
 
 /* NavBar */
@@ -49,6 +69,7 @@
     margin-right: auto;
     justify-self: anchor-center;
     margin-top: 1%;
+    z-index: 1000;
 
     img {
         width: 250px;
@@ -65,3 +86,227 @@
         text-align: center;
     }
 }
+
+/* section Notre Mission */
+
+#secNotreMission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--vertClair);
+    height: 250px;
+    padding-bottom: 2%;
+
+    p {
+        font-family: var(--text-font-family);
+        font-weight: var(--text-font-weight);
+        font-style: var(--text-font-style);
+        color: var(--text-color);
+        text-align: center;
+        font-size: large;
+        width: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 2%;
+    }
+}
+
+/* section Fonctionnalités */
+#secFonc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#classContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 48px;
+    justify-items: center;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.cardFonct {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.09);
+    padding: 32px 24px;
+    width: 100%;
+    max-width: 340px;
+    min-height: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+
+    p {
+        color: black;
+        font-family: var(--text-font-family);
+        font-weight: var(--text-font-weight);
+        font-style: var(--text-font-style);
+    }
+
+    h2 {
+        color: var(--vert);
+        font-family: var(--titre-font-family);
+        font-weight: var(--titre-font-weight);
+        font-style: var(--titre-font-style);
+        font-size: x-large;
+        margin-bottom: 16px;
+    }
+
+    .card-icon {
+        background: var(--vertClair);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+
+        img{
+            width: 32px;
+            height: 32px;
+        };
+
+    }
+
+
+}
+
+.cardFonct:hover {
+    box-shadow: 0 6px 32px rgba(0, 191, 197, 0.15);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* section Marche */
+
+.cardMarche {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  padding: 36px 28px 28px 28px;
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px auto;
+  transition: box-shadow 0.2s;
+
+  img{
+    width: 64px;
+    height: 64px;
+    margin-bottom: 24px;
+  }
+
+  h4{
+    color: var(--vert);
+    font-family: var(--titre-font-family);
+    font-weight: var(--titre-font-weight);
+    font-style: var(--titre-font-style);
+    margin: 0 0 18px 0;
+    font-size: xx-large;
+  }
+
+  p{
+    color: var(--text-color);
+    font-family: var(--text-font-family);
+    font-weight: var(--text-font-weight);
+    font-style: var(--text-font-style);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#find {
+    display: flex;
+    flex-direction: row;
+}
+
+#green {
+    color: #00B0AE;
+    font-family: "Baloo Chettan 2", sans-serif,
+        font-optical-sizing auto,
+        font-weight 500,
+        font-style normal
+}
+
+.check {
+    background-color: #FB87A7;
+    border: #FB87A7;
+    height: 40px;
+    width: 190px;
+    color: white;
+    border-radius: 30px;
+}
+
+#approach {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Baloo 2", sans-serif,
+        font-optical-sizing auto,
+        font-weight normal,
+        font-style normal;
+}
+.card-notice{
+width: 300px;
+height: 100px;
+  margin: 20px auto;
+  padding: 20px;
+border-radius: 20px;
+text-align: center;
+
+  /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.09); */
+}
+#notice{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+padding: 2px;
+}
+.writting{
+    background-color:#DDF6F8 ;
+        font-family: "Baloo 2", sans-serif,
+        font-optical-sizing auto,
+        font-weight normal,
+        font-style normal;
+}
+.photos{
+    color: #FFEAFC;
+    background-color: var(--vert);
+} 
