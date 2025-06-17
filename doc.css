@@ -1,1 +1,32 @@
 /* Le code CSS spécifique à la page de documentation */
+:root {
+    --vert: #00B0AE;
+    --vertClair: #DDF6F8;
+    --rose: #FB87A7;
+    --roseClair: #FFEAFC;
+    --jaune: #FFB636;
+    --jauneClair: #FFEBC7;
+    --text-color: black;
+
+    --titre:
+        font-family: "Baloo Chettan 2", sans-serif,
+        font-optical-sizing: auto,
+        font-weight: 500,
+        font-style: normal;
+    --sousTitre: font-family: "Baloo Bhai 2", sans-serif,
+        font-optical-sizing: auto,
+        font-weight: medium,
+        font-style: normal;
+    --text: font-family: "Baloo 2", sans-serif,
+        font-optical-sizing: auto,
+        font-weight: normal,
+        font-style: normal;
+
+    --radius: 20px;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+}
