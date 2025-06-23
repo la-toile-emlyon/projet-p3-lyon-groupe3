@@ -318,8 +318,9 @@ h1 {
     max-width: 950px;
     align-items: flex-start;
     width: 100%;
-    transform: translateX(400%);
-    transition: transform 0.7s cubic-bezier(.5, 1.5, .5, 1);
+    transform: translateY(200px);
+    transition: transform 1.2s cubic-bezier(.5, 1.5, .5, 1), opacity 1.2s;
+    opacity: 0;
 
 
     h4 {
@@ -332,13 +333,11 @@ h1 {
     }
 }
 
-.cardDistingue:nth-of-type(even) {
-    transform: translateX(-400%);
-}
 
 .cardDistingue.show,
 .cardDistingue.show:nth-of-type(even) {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .infoDist {
@@ -499,7 +498,18 @@ h1 {
     top: 18px;
     left: 18px;
     font-size: 2.5rem;
-    color: #fff;
+    color: #000000;
+    font-family: serif;
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+.quote-mark2 {
+    position: absolute;
+    top: 195px;
+    left: 232px;
+    font-size: 2.5rem;
+    color: #000000;
     font-family: serif;
     opacity: 0.7;
     font-weight: bold;
@@ -600,7 +610,6 @@ h1 {
     transform: translateX(-50%);
 }
 
-
 .photos h5 {
     margin-top: 60px;
     color: white;
@@ -616,6 +625,43 @@ h1 {
     text-align: center;
     width: 100%;
     height: 100%;
+}
+
+.btnDL {
+    cursor: pointer;
+
+}
+
+#mkDL {
+
+    height: 380px;
+    width: 270px;
+}
+
+#divMK {
+    width: 75%;
+}
+
+#divDL {
+    display: flex;
+    width: 90%;
+
+    div {
+        align-content: center;
+    }
+
+    h4 {
+        color: black;
+        font-family: var(--titre-font-family);
+        font-weight: var(--titre-font-weight);
+        font-style: var(--titre-font-style);
+        font-size: 2.3rem;
+        margin-bottom: 10px;
+    }
+}
+
+#infoDL {
+    width: 80%;
 }
 
 .download {
@@ -673,6 +719,7 @@ footer {
     place-content: center;
     gap: 20px;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .formulaire {
