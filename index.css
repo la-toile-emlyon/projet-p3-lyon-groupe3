@@ -224,6 +224,11 @@ h1 {
     flex-wrap: nowrap;
 }
 
+#imgScroll {
+    display: flex;
+    place-self: center;
+    margin-bottom: 20px;
+}
 
 .cardMarche-scroll {
     display: flex;
