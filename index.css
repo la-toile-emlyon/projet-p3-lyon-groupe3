@@ -120,7 +120,7 @@ h1 {
     justify-content: center;
     background-color: var(--vertClair);
     height: 290px;
-    padding-bottom: 2%;
+    padding-bottom: 6%;
 
     p {
         font-family: var(--text-font-family);
