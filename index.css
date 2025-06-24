@@ -416,10 +416,9 @@ h1 {
     color: #00B0AE;
     font-size: xxx-large;
     width: 80%;
-    font-family: "Baloo Chettan 2", sans-serif,
-        font-optical-sizing auto,
-        font-weight 500,
-        font-style normal
+    font-family: var(--titre-font-family);
+    font-weight: var(--titre-font-weight); 
+    font-style: var(--titre-font-style);
 }
 
 .check {
