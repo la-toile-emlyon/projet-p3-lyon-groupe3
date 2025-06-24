@@ -4,12 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function showCardsIfTitleVisible() {
     const triggerTop = trigger.getBoundingClientRect().top;
-    const triggerBottom = window.innerHeight * 0.95; 
+    const triggerBottom = window.innerHeight * 0.95;
 
     if (triggerTop < triggerBottom) {
       cards.forEach(card => card.classList.add('show'));
-    } else {
-      cards.forEach(card => card.classList.remove('show'));
+      window.removeEventListener('scroll', showCardsIfTitleVisible);
     }
   }
 
