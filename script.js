@@ -1,22 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const boxes = document.querySelectorAll(".cardDistingue");
+  const cards = document.querySelectorAll('.cardDistingue');
+  const trigger = document.getElementById('distingue-title');
 
-    window.addEventListener('scroll', checkBoxes);
+  function showCardsIfTitleVisible() {
+    const triggerTop = trigger.getBoundingClientRect().top;
+    const triggerBottom = window.innerHeight * 0.95; 
 
-    checkBoxes();
-
-    function checkBoxes() {
-        const triggerBottom = window.innerHeight / 5 * 4;
-
-        boxes.forEach(box => {
-            const boxTop = box.getBoundingClientRect().top;
-
-            if (boxTop < triggerBottom) {
-                box.classList.add('show');
-            } else {
-                box.classList.remove('show');
-            }
-        });
+    if (triggerTop < triggerBottom) {
+      cards.forEach(card => card.classList.add('show'));
+    } else {
+      cards.forEach(card => card.classList.remove('show'));
     }
-});
+  }
 
+  window.addEventListener('scroll', showCardsIfTitleVisible);
+  showCardsIfTitleVisible();
+});

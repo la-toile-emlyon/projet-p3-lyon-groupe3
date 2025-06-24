@@ -47,6 +47,7 @@ h3 {
     text-align: center;
     font-size: xxx-large;
     height: 60px;
+    margin-top: 40px;
 }
 
 .lineTitle {
@@ -79,7 +80,7 @@ h1 {
     position: fixed;
     top: 0;
     border-radius: var(--radius);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.699);
     width: 100%;
     max-width: 700px;
     padding: 18px 40px;
@@ -89,9 +90,14 @@ h1 {
     margin-top: 1%;
     z-index: 1000;
 
+    /* test */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
+
     img {
-        width: 200px;
-        height: 45px;
+        width: 180px;
+        height: 40px;
     }
 
     a {
@@ -166,6 +172,7 @@ h1 {
     z-index: 1;
     transition: all 0.3s ease-in-out;
 
+
     p {
         color: black;
         font-family: var(--text-font-family);
@@ -214,6 +221,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: var(--vertClair);
 }
 
 .grid-marche {
@@ -235,10 +243,26 @@ h1 {
     gap: 32px;
     overflow-x: auto;
     max-width: 100vw;
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
     padding: 24px 0 24px 24px;
-    width: 80%;
 }
+
+.cardMarche-wrapper:first-of-type {
+    margin-left: 40px;
+}
+
+.cardMarche-wrapper:last-of-type{
+    margin-right: 40px;
+}
+
+.cardMarche:first-of-type {
+    margin-left: 40px;
+}
+
+.cardMarche:last-of-type{
+    margin-right: 40px;
+}
+
 
 .cardMarche-scroll::-webkit-scrollbar {
     display: none;
@@ -247,13 +271,14 @@ h1 {
 .cardMarche-wrapper {
     display: inline-block;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
-    background: var(--vert);
+    flex: 0 0 auto;
     width: 325px;
     height: 200px;
     clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 10% 50%);
 }
 
 .cardMarche {
+    place-self: center;
     background: #ffffff;
     min-height: 200px;
     display: flex;
@@ -273,6 +298,11 @@ h1 {
     min-width: 280px;
     max-width: 90vw;
     margin-right: 10px;
+    width: 320px;
+    min-width: 280px;
+    max-width: 90vw;
+    scroll-snap-align: start;
+
 
     img {
         width: 40px;
@@ -324,8 +354,10 @@ h1 {
     align-items: flex-start;
     width: 100%;
     transform: translateY(200px);
-    transition: transform 1.2s cubic-bezier(.5, 1.5, .5, 1), opacity 1.2s;
     opacity: 0;
+    transition: transform 1.2s cubic-bezier(.5, 1.5, .5, 1), opacity 1.2s;
+    
+
 
 
     h4 {
@@ -417,7 +449,7 @@ h1 {
     font-size: xxx-large;
     width: 80%;
     font-family: var(--titre-font-family);
-    font-weight: var(--titre-font-weight); 
+    font-weight: var(--titre-font-weight);
     font-style: var(--titre-font-style);
 }
 
@@ -487,6 +519,7 @@ h1 {
     align-items: center;
     margin: 18px;
 }
+
 
 .card-notice-content {
     padding: 32px 18px 0 18px;
@@ -637,7 +670,6 @@ h1 {
 }
 
 #mkDL {
-
     height: 380px;
     width: 270px;
 }
@@ -715,7 +747,10 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 1%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 255px;
 }
 
 #network {
@@ -775,4 +810,59 @@ footer {
     height: 40px;
     width: 40px;
     cursor: pointer;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+
+    font-family: "Baloo 2", sans-serif,
+        font-optical-sizing auto,
+        font-weight normal,
+        font-style normal;
+}
+
+
+/* Links Footer */
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    margin: 40px 0;
+}
+
+#links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: var(--vert);
+    margin-bottom: 20px;
+}
+
+#links li {
+    font-family: var(--text-font-family);
+    font-weight: var(--text-font-weight);
+    font-style: var(--text-font-style);
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: left;
+}
+
+#links li:hover {
+    font-family: var(--text-font-family);
+    font-weight: var(--text-font-weight);
+    font-style: var(--text-font-style);
+    color: var(--rose);
+    scale: 1.05;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+    text-align: left;
 }
