@@ -447,7 +447,7 @@ h1 {
     font-size: xxx-large;
     width: 80%;
     font-family: var(--titre-font-family);
-    font-weight: var(--titre-font-weight);
+    font-weight:large;
     font-style: var(--titre-font-style);
 }
 

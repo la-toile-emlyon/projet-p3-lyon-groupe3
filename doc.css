@@ -65,8 +65,9 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
     background-color: var(--vertClair);
-    height: 290px;
+    height:auto;
     padding-bottom: 9%;
     margin-bottom: 5%;
 }
@@ -253,10 +254,7 @@ footer {
     background-position: center;
     padding-top: 1%;
 }
-/* #place{
-    display:flex;
-    flex-direction: column; */
-/* } */
+
 #arrow{
     display: flex;
     justify-content: center;
