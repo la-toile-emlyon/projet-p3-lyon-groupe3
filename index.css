@@ -787,6 +787,7 @@ footer {
 }
 
 #plane {
+    
     background: linear-gradient(45deg, var(--rose) 80%, var(--roseClair) 100%);
     border: none;
     outline: none;
@@ -864,3 +865,4 @@ footer {
     font-size: 1rem;
     text-align: left;
 }
+

@@ -253,7 +253,28 @@ footer {
     background-position: center;
     padding-top: 1%;
 }
-#place{
+/* #place{
     display:flex;
+    flex-direction: column; */
+/* } */
+#arrow{
+    display: flex;
+    justify-content: center;
+    
+}
+#place{
+    text-align: center;
+    p{
+        margin-top: 15px;
+    }
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lineTitle{
+   width: 100px;
+    max-width: 800px;
+    height: auto;
+    margin-left: 155px;
 }
