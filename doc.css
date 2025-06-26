@@ -378,3 +378,11 @@ button:hover{
 .serv{
     width: 160px;
 }
+
+
+.infoServ{
+    font-family: var(--sousTitre-font-family);
+    font-weight: var(--sousTitre-font-weight);
+    font-style: var(--sousTitre-font-style);
+    font-size: 20px;
+}
